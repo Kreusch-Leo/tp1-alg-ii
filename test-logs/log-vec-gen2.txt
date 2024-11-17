@@ -1,0 +1,31 @@
+
+
+Olá. Que tipo de análise faremos?
+
+0 - Seguir um padrão com a semente 0
+1 - Vetores aleatórios (baseados no horário do sistema)
+Digite sua opcao: 
+
+Digite a função que deseja executar: 
+1 - Cria novo Vetor
+2 - Ordena Vetor (Bubble, Shell, Quick)
+3 - Busca elemento (Sequencial e Binaria)
+4 - Executa analise geral
+5 - Encerra a operacao
+Digite sua opcao: 
+
+[32mO vetor gerado na forma reduzida é: [ 882, 862, 1631, 1470, 1296, ... , 1860, 319, 81, 288, 995, 1558 ]
+[0m
+
+Digite a função que deseja executar: 
+1 - Cria novo Vetor
+2 - Ordena Vetor (Bubble, Shell, Quick)
+3 - Busca elemento (Sequencial e Binaria)
+4 - Executa analise geral
+5 - Encerra a operacao
+Digite sua opcao: 
+
+[33m!!!!!
+Obrigado pela atencao :)
+!!!!![0m
+

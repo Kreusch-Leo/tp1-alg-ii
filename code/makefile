@@ -1,12 +1,18 @@
-# Flags de compilação
 CFLAGS = -Wall -Wextra -g -std=c99
 CC = gcc
 LDFLAGS = -lm  # Link com a biblioteca matemática
 BIN = main
+FILE_PATH = https://github.com/Kreusch-Leo/tp1-alg-ii.git
+DEST_DIR = copycode
+
+# Clona os arquivos de código
+clone-files: 
+	git clone $(FILE_PATH) ~/$(DEST_DIR)
+	echo "Mova-se para o diretorio copycode/code e execute make"
 
 # Gera o executável
 all: main.o analise.o search.o sort.o
-	$(CC) -o main main.o analise.o search.o sort.o $(LDFLAGS)  
+	$(CC) -o $(BIN) main.o analise.o search.o sort.o $(LDFLAGS)
 
 # Compila search.c
 search.o: search.c search.h
@@ -26,9 +32,8 @@ main.o: main.c search.h sort.h analise.h
 
 # Limpeza dos arquivos objeto e executável
 clean:
-	rm -f *.o *~ main
+	rm -f *.o *~ $(BIN)
 
-valgrind: main
-	valgrind --leak-check=full --track-origins=yes ./$(BIN)
-
-
+# Regra para executar o programa
+run: all
+	./$(BIN)

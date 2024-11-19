@@ -184,7 +184,7 @@ int main() {
                 printf("Acessos ao vetor para trocas: %d\n", singleData->quick_1->acessos);
                 spacing();
 
-                printf("\033[34m Os resultados do QuickSort (pivo na proximo do meio) foram:\n");
+                printf("\033[34m Os resultados do QuickSort (pivo mediano de tres) foram:\n");
                 printf("\033[33mComparacoes entre elementos: %d\n", singleData->quick_2->comparacoes);
                 printf("Acessos ao vetor para trocas: %d\n\033[0m", singleData->quick_2->acessos);
                 spacing();
@@ -204,22 +204,34 @@ int main() {
                 get_data(singleData);
                 
                 spacing();
-                printf("Escolha um valor que deseja encontrar\n");
+                printf("0 - Escolher o valor que será buscado\n");
+                printf("1 - Encontrar um valor aleatório\n");
+                switch (get_int(1)) {
+                case 0:
+                    spacing();
+                    printf("Escolha um valor que deseja encontrar\n");
+                    chave = get_int(2028);
+                    break;
                 
-                chave = get_int(2028);
+                default:
+                    chave = aleat();
+                    break;
+                }
+                
+                spacing();
                 compBusca = 0;
                 
                 localizacao = pesquisa_sequencial(singleData->vetor, TAM, chave, &compBusca);
                 if (localizacao < 0) {
                     printf("\033[31mELEMENTO NAO ESTA NO VETOR GERADO\033[0m");
                 } else {
-                    printf("\033[36mA pesquisa sequencial comum precisou de %d comparações para encontrar na posicao %d\n", compBusca, localizacao);
+                    printf("\033[36mA pesquisa sequencial comum precisou de %d comparações para encontrar o valor %d na posicao %d\n", compBusca, chave, localizacao);
                     compBusca = 0;
                     localizacao = pesquisa_sequencial_sentinela(singleData->vetor, TAM, chave, &compBusca);
-                    printf("A pesquisa sequencial com sentinela precisou de %d comparações para encontrar na posicao %d\n", compBusca, localizacao);
+                    printf("A pesquisa sequencial com sentinela precisou de %d comparações para encontrar o valor %d na posicao %d\n", compBusca, chave, localizacao);
                     compBusca = 0;
                     localizacao = pesquisa_binaria(singleData->vetorOrd, TAM, chave, &compBusca);
-                    printf("A pesquisa binaria precisou de %d comparações para encontrar na posicao %d\033[0m\n", compBusca, localizacao);
+                    printf("A pesquisa binaria precisou de %d comparações para encontrar o valor %d na posicao %d\033[0m\n", compBusca, chave, localizacao);
                     spacing();
                 }
                 break;
@@ -302,7 +314,7 @@ int main() {
                     comparacoes[i] = data[i]->quick_2->comparacoes;
                 }
 
-                printf("Quick sort (pivo proximo do meio):\n");
+                printf("Quick sort (pivo mediano de tres):\n");
                 printf("Acessos:\n");
                 printf("Média = %li\n", media(acessos, ANALISES));
                 printf("Desvio padrao = %.2f\n\n", desvio_padrao(acessos, ANALISES));

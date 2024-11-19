@@ -14,8 +14,14 @@ Digite a função que deseja executar:
 5 - Encerra a operacao
 Digite sua opcao: 
 
+0 - Escolher o valor que será buscado
+1 - Encontrar um valor aleatório
+Digite sua opcao: 
+
 Escolha um valor que deseja encontrar
-Digite sua opcao: [31mELEMENTO NAO ESTA NO VETOR GERADO[0m
+Digite sua opcao: 
+
+[31mELEMENTO NAO ESTA NO VETOR GERADO[0m
 
 Digite a função que deseja executar: 
 1 - Cria novo Vetor

@@ -7,22 +7,25 @@
 #ifndef ALG_SORT_H
 #define ALG_SORT_H
 
-// Função de ordenação por insert sort
+// Funcao de ordenacao por insert sort
 void insert_sort(int vetor[], int *accessCounter, int *compCounter);
 
-// Função de ordenação por selection sort
+// Funcao de ordenacao por selection sort
 void select_sort(int vetor[], int length, int *accessCounter, int *compCounter);
 
-// Função de ordenação por bubble sort
+// Funcao de ordenacao por bubble sort
 void bubble_sort(int vetor[], int length, int *accessCounter, int *compCounter);
 
-// Função de particionamento para o algoritmo quick sort
+// Funcao para encontrar a mediana de tres numeros
+int mediano_de_tres(int vet[], int esq, int dir, int *accessCounter);
+
+// Funcao de particionamento para o algoritmo quick sort
 void particao(int vet[], int esq, int dir, int *pos_pivo, int *accessCounter, int *compCounter, int esqPiv);
 
-// Função de ordenação quick sort
+// Funcao de ordenacao quick sort
 void quick_sort(int v[], int esq, int dir, int *accessCounter, int *compCounter, int esqPiv);
 
-// Função de ordenação shell sort com espaçamento definido
+// Funcao de ordenacao shell sort com espaco definido
 void shell_sort(int vetor[], int length, int espacamento, int *accessCounter, int *compCounter);
 
 #endif // ALG_SORT_H

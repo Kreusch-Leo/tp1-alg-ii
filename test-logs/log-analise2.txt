@@ -1018,64 +1018,64 @@ Preenchimento bem sucedido para o elemento 999
 
 Bubble Sort:
 Acessos:
-Média = 786119
-Desvio padrao = 16451.78
+Média = 784867
+Desvio padrao = 16186.26
 
 Comparacoes:
-Média = 787863
-Desvio padrao = 5483.93
+Média = 787446
+Desvio padrao = 5395.42
 
 
 Shell Sort (espacamento 16):
 Acessos:
-Média = 19964
-Desvio padrao = 435.96
+Média = 19981
+Desvio padrao = 426.16
 
 Comparacoes:
-Média = 15058
-Desvio padrao = 435.96
+Média = 15075
+Desvio padrao = 426.16
 
 
 Shell Sort (espacamento 32):
 Acessos:
-Média = 21314
-Desvio padrao = 548.44
+Média = 21315
+Desvio padrao = 534.60
 
 Comparacoes:
-Média = 15573
-Desvio padrao = 548.44
+Média = 15574
+Desvio padrao = 534.60
 
 
 Quick sort (pivo na primeira posicao):
 Acessos:
-Média = 7147
-Desvio padrao = 99.98
+Média = 8840
+Desvio padrao = 86.91
 
 Comparacoes:
-Média = 12547
-Desvio padrao = 717.40
+Média = 10596
+Desvio padrao = 336.68
 
 
-Quick sort (pivo proximo do meio):
+Quick sort (pivo mediano de tres):
 Acessos:
-Média = 7718
-Desvio padrao = 103.07
+Média = 7713
+Desvio padrao = 98.23
 
 Comparacoes:
-Média = 12677
-Desvio padrao = 656.02
+Média = 12713
+Desvio padrao = 682.67
 
 
 Pesquisa sequencial normal
 Comparacoes:
-Média = 1063
-Desvio padrao = 583.20
+Média = 1025
+Desvio padrao = 603.24
 
 
 Pesquisa sequencial com sentinela
 Comparacoes:
-Média = 493
-Desvio padrao = 291.60
+Média = 512
+Desvio padrao = 301.62
 
 
 Pesquisa Binaria

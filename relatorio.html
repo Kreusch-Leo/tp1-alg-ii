@@ -10,153 +10,165 @@
     <h1>Relatório de trabalho prático</h1>
     <p id="line"><strong>Feito em 20/11/2024 para a disciplina CI1056 - ALGORITMOS E ESTRUTURAS DE DADOS 2</strong></p>
     <p id="line"><a href="index.html">Clique aqui</a> para retornar à página principal.</p>
-<section>
-    
-       <h2>Introdução</h2>
-       <p>
-           O presente relatório tem como objetivo apresentar o desempenho de diferentes algoritmos de ordenação e busca, incluindo Bubble Sort, Shell Sort, Quick Sort, e métodos de Pesquisa Sequencial e Pesquisa Binária. A análise é realizada com base em dois parâmetros principais: acessos, ou trocas entre elementos, e comparações realizadas durante a execução dos algoritmos. As médias e desvios padrão desses parâmetros são calculados para mil execuções em vetores de 1024 elementos com inteiros aleatórios no intervalo [0, 2048], visando fornecer uma visão mais detalhada sobre a eficiência de cada algoritmo.
-       </p>
-    
-       <h2>Algoritmos de Ordenação</h2>
-       <p>
-           Os algoritmos de ordenação selecionados foram selecionados de acordo com o comando presente em <a href="https://www.inf.ufpr.br/elias/algoritmos/trab-2024.html">LINK</a>. O algoritmo exponencial escolhido foi o Bubble Sort.</p>
-    
-       <h3>Bubble Sort</h3>
-       <p>
-           O Bubble Sort é um algoritmo simples de ordenação baseado na troca repetida de elementos adjacentes, caso eles estejam na ordem errada. O algoritmo é notoriamente ineficiente para listas grandes, como evidenciado pelos resultados obtidos. A média de acessos foi de 786.119 e o desvio padrão foi de 16.451,78. A média de comparações foi de 787.863, com um desvio padrão de 5.483,93, indicando um número considerável de operações realizadas, o que evidencia que o algoritmo não é adequado para grandes volumes de dados.
-       </p>
-    
-       <h3>Shell Sort</h3>
-       <p>
-           O Shell Sort é uma melhoria do Insert(ion) Sort, utilizando um conceito de "espaçamento" para ordenar elementos de maneira mais eficiente. Foram escolhidas duas potências de dois (16 e 32) para espaçamento nas análises. Para espaçamento 16, a média de acessos foi de 19964, e o desvio padrão foi de 435,96. Para espaçamento 32, a média de acessos aumentou ligeiramente para 21314, com desvio padrão de 548,44, enquanto as comparações médias permaneceram próximas (média: 15606) (desvio padrão: 546.02).
-       </p>
-    
-       <h3>Quick Sort</h3>
-       <p>
-           O Quick Sort é um algoritmo de ordenação eficiente que utiliza a técnica de divisão em partições (sub vetores), escolhendo um pivô e ordenando os elementos em torno dele. Para o pivô na primeira posição, a média de acessos foi de 7147, com um desvio padrão de 99,98. A média de comparações foi de 12547, com desvio padrão de 717,40. Para o pivô próximo ao meio, os valores não variaram muito: a média de acessos foi de 7718 e a média de comparações foi de 12677. O Quick Sort se destacou por sua baixa quantidade de acessos e comparações, tornando-o o algoritmo mais eficiente para ordenação.
-       </p>
-    
-       <h2>Algoritmos de Busca</h2>
-       <p>
-           Os algoritmos utilizados para busca de elementos dentro dos vetores gerados foram: a pesquisa sequencial (com e sem aplicação de sentinela), em vetor desordenado, e a pesquisa binária, em vetor já ordenado.
-       </p>
-    
-       <h3>Pesquisa Sequencial "Comum"</h3>
-       <p>
-           A Pesquisa Sequencial é um algoritmo simples que verifica cada elemento da lista até encontrar o valor desejado. Este algoritmo é ineficiente para listas grandes, como evidenciado pelos resultados, que indicam uma média de 1063 comparações, com desvio padrão de 583,20, valores consideravelmente altos.
-       </p>
-    
-       <h3>Pesquisa Sequencial com Sentinela</h3>
-       <p>
-           A Pesquisa Sequencial com Sentinela é uma melhoria na pesquisa sequencial, onde um valor sentinel é colocado no início da lista para evitar verificações adicionais de limite. Este algoritmo reduz o número de comparações em relação à pesquisa sequencial comum. A média de comparações foi de 493, com um desvio padrão de 291,60, resultado significativamente melhor do que a pesquisa sequencial normal.
-       </p>
-    
-       <h3>Pesquisa Binária</h3>
-       <p>
-           A Pesquisa Binária é um algoritmo muito eficiente para buscar um valor em uma lista ordenada, dividindo repetidamente a lista ao meio. A média de comparações foi de apenas 8, com um desvio padrão de 1,41. Isso demonstra que a pesquisa binária é extremamente eficiente e muito mais rápida do que as pesquisas sequenciais, especialmente para listas grandes.
-       </p>
-       <h2>Tabela de desempenho</h2>
-       <table border="1">
-           <thead>
-               <tr>
-                   <th>Algoritmo</th>
-                   <th>Métrica</th>
-                   <th>Média</th>
-                   <th>Desvio Padrão</th>
-               </tr>
-           </thead>
-           <tbody>
-               <tr>
-                   <td rowspan="2">Bubble Sort</td>
-                   <td>Acessos</td>
-                   <td>785258</td>
-                   <td>16124.48</td>
-               </tr>
-               <tr>
-                   <td>Comparações</td>
-                   <td>787576</td>
-                   <td>5374.83</td>
-               </tr>
-               <tr>
-                   <td rowspan="2">Shell Sort (espaçamento 16)</td>
-                   <td>Acessos</td>
-                   <td>19977</td>
-                   <td>443.05</td>
-               </tr>
-               <tr>
-                   <td>Comparações</td>
-                   <td>15071</td>
-                   <td>443.05</td>
-               </tr>
-               <tr>
-                   <td rowspan="2">Shell Sort (espaçamento 32)</td>
-                   <td>Acessos</td>
-                   <td>21347</td>
-                   <td>546.02</td>
-               </tr>
-               <tr>
-                   <td>Comparações</td>
-                   <td>15606</td>
-                   <td>546.02</td>
-               </tr>
-               <tr>
-                   <td rowspan="2">Quick Sort (pivô na primeira posição)</td>
-                   <td>Acessos</td>
-                   <td>7150</td>
-                   <td>96.45</td>
-               </tr>
-               <tr>
-                   <td>Comparações</td>
-                   <td>12527</td>
-                   <td>678.56</td>
-               </tr>
-               <tr>
-                   <td rowspan="2">Quick Sort (pivô próximo do meio)</td>
-                   <td>Acessos</td>
-                   <td>7711</td>
-                   <td>101.98</td>
-               </tr>
-               <tr>
-                   <td>Comparações</td>
-                   <td>12769</td>
-                   <td>713.27</td>
-               </tr>
-               <tr>
-                   <td>Pesquisa Sequencial Normal</td>
-                   <td>Comparações</td>
-                   <td>1029</td>
-                   <td>592.76</td>
-               </tr>
-               <tr>
-                   <td>Pesquisa Sequencial com Sentinela</td>
-                   <td>Comparações</td>
-                   <td>510</td>
-                   <td>296.38</td>
-               </tr>
-               <tr>
-                   <td>Pesquisa Binária</td>
-                   <td>Comparações</td>
-                   <td>8</td>
-                   <td>1.41</td>
-               </tr>
-           </tbody>
-       </table>
-       <h2>Conclusão</h2>
-       <p>Considerando os resultados obtidos para os algoritmos de ordenação, é possível notar claramente que o Bubble Sort é o mais ineficiente deles, resultado coerente com o comportamento exponencial. Para o Shell Sort, não houveram grandes diferenças entre os espaçamentos escolhidos, mas seu desempenho foi significativamente maior do que Bubble Sort. Para o Quick Sort, o método de escolha de pivô também não parece ter interferido muito no resultado. O segundo método de escolha de pivô, selecionar médio entre o elemento da esquerda e da direita do vetor, pode implicar em poucas mudanças na formação dos sub vetores, implicando na aparente leve queda de eficiência observada.Tendo em vista esses pontos e a tabela de desempenho acima, pode-se afirmar que o Quick Sort supera o Shell Sort nas condições analisadas.</p>
-       <h2>Logs</h2>
-       <p>Segue uma coleção de logs gerados durante os testes</p>
-       <ul>
-           <li><a href="./test-logs/log-vec-gen1.txt">Gerar vetor Aleatório - 1</a></li>
-           <li><a href="./test-logs/log-vec-gen2.txt">Gerar vetor Aleatório - 2</a></li>
-           <li><a href="./test-logs/log-single-1.txt">Análise de um único vetor - 1</a></li>
-           <li><a href="./test-logs/log-single-2.txt">Análise de um único vetor - 2</a></li>
-           <li><a href="./test-logs/log-find-1.txt">Encontrar elemento no vetor - 1</a></li>
-           <li><a href="./test-logs/log-find-2.txt">Encontrar elemento no vetor - 2</a></li>
-           <li><a href="./test-logs/log-analise-1.txt">Análise geral - 1</a></li>
-           <li><a href="./test-logs/log-analise-2.txt">Análise geral - 2</a></li>
-           <li><a href="./test-logs/log-full-cicle-1.txt">Uso de todas as opções eu uma única execução - 1</a></li>
-           <li><a href="./test-logs/log-full-cicle-2.txt">Uso de todas as opções eu uma única execução - 2</a></li>
-       </ul>
-</section>
+    <p id="line">Leonardo Kreusch GRR20245579</p>
+    <section>
+        
+        <h2>Introdução</h2>
+        <p>
+            O presente relatório tem como objetivo apresentar o desempenho de diferentes algoritmos de ordenação e busca, incluindo Bubble Sort, Shell Sort, Quick Sort, e métodos de Pesquisa Sequencial e Pesquisa Binária. A análise é realizada com base em dois parâmetros principais: acessos, ou trocas entre elementos, e comparações realizadas durante a execução dos algoritmos. As médias e desvios padrão desses parâmetros são calculados para mil execuções em vetores de 1024 elementos com inteiros aleatórios no intervalo [0, 2048], visando fornecer uma visão mais detalhada sobre a eficiência de cada algoritmo.
+        </p>
+        
+        <h2>Algoritmos de Ordenação</h2>
+        <p>
+            Os algoritmos de ordenação selecionados foram selecionados de acordo com o comando presente em <a href="https://www.inf.ufpr.br/elias/algoritmos/trab-2024.html">LINK</a>. O algoritmo exponencial escolhido foi o Bubble Sort.</p>
+        
+            <h3>Bubble Sort</h3>
+            <p>
+                O Bubble Sort é um algoritmo simples de ordenação baseado na troca repetida de elementos adjacentes, caso eles estejam na ordem errada. O algoritmo é notoriamente ineficiente para listas grandes, evidenciado pelo grande número de operações realizadas, o que demonstra que o algoritmo não é adequado para grandes volumes de dados. Os dados de média e desvio padrão podem ser encontrados na tabela abaixo.
+            </p>
+            
+            <h3>Shell Sort</h3>
+            <p>
+                O Shell Sort é uma melhoria do Insert(ion) Sort, utilizando um conceito de "espaçamento" para ordenar elementos de maneira mais eficiente. Foram escolhidas duas potências de dois (16 e 32) para espaçamento nas análises. A performance do algoritmo variou conforme o espaçamento, mas de modo geral, o desempenho foi significativamente melhor do que o Bubble Sort. Os dados de média e desvio padrão podem ser encontrados na tabela abaixo.
+            </p>
+            
+            <h3>Quick Sort</h3>
+            <p>
+                O Quick Sort é um algoritmo de ordenação eficiente que utiliza a técnica de divisão em partições (subvetores), escolhendo um pivô e ordenando os elementos em torno dele. O algoritmo apresentou baixa quantidade de acessos e comparações, destacando-se como o mais eficiente para ordenação. Os dados de média e desvio padrão podem ser encontrados na tabela abaixo.
+            </p>
+            
+            <h2>Algoritmos de Busca</h2>
+            <p>
+                Os algoritmos utilizados para busca de elementos dentro dos vetores gerados foram: a pesquisa sequencial (com e sem aplicação de sentinela), em vetor desordenado, e a pesquisa binária, em vetor já ordenado. Os dados de média e desvio padrão podem ser encontrados na tabela abaixo.
+            </p>
+            
+            <h3>Pesquisa Sequencial "Comum"</h3>
+            <p>
+                A Pesquisa Sequencial é um algoritmo simples que verifica cada elemento da lista até encontrar o valor desejado. Este algoritmo é ineficiente para listas grandes, evidenciado pelo número elevado de comparações realizadas. Os dados de média e desvio padrão podem ser encontrados na tabela abaixo.
+            </p>
+            
+            <h3>Pesquisa Sequencial com Sentinela</h3>
+            <p>
+                A Pesquisa Sequencial com Sentinela é uma melhoria na pesquisa sequencial, onde um valor sentinel é colocado no início da lista para evitar verificações adicionais de limite. Este algoritmo reduz o número de comparações em relação à pesquisa sequencial comum, tornando-o mais eficiente. Os dados de média e desvio padrão podem ser encontrados na tabela abaixo.
+            </p>
+            
+            <h3>Pesquisa Binária</h3>
+            <p>
+                A Pesquisa Binária é um algoritmo muito eficiente para buscar um valor em uma lista ordenada, dividindo repetidamente a lista ao meio. Sua eficiência é muito superior à das pesquisas sequenciais, especialmente para listas grandes. Os dados de média e desvio padrão podem ser encontrados na tabela abaixo.
+            </p>
+            
+            
+        <h2>Tabela de desempenho</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Algoritmo</th>
+                    <th>Métrica</th>
+                    <th>Média</th>
+                    <th>Desvio Padrão</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">Bubble Sort</td>
+                    <td>Acessos</td>
+                    <td>785760</td>
+                    <td>16901.34</td>
+                </tr>
+                <tr>
+                    <td>Comparações</td>
+                    <td>787744</td>
+                    <td>5633.78</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Shell Sort (espaçamento 16)</td>
+                    <td>Acessos</td>
+                    <td>19987</td>
+                    <td>434.92</td>
+                </tr>
+                <tr>
+                    <td>Comparações</td>
+                    <td>15081</td>
+                    <td>434.92</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Shell Sort (espaçamento 32)</td>
+                    <td>Acessos</td>
+                    <td>21292</td>
+                    <td>537.16</td>
+                </tr>
+                <tr>
+                    <td>Comparações</td>
+                    <td>15551</td>
+                    <td>537.16</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Quick Sort (pivô na primeira posição)</td>
+                    <td>Acessos</td>
+                    <td>8839</td>
+                    <td>81.84</td>
+                </tr>
+                <tr>
+                    <td>Comparações</td>
+                    <td>10603</td>
+                    <td>347.55</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Quick Sort (pivô mediano de três)</td>
+                    <td>Acessos</td>
+                    <td>7713</td>
+                    <td>98.29</td>
+                </tr>
+                <tr>
+                    <td>Comparações</td>
+                    <td>12744</td>
+                    <td>705.05</td>
+                </tr>
+                <tr>
+                    <td>Pesquisa Sequencial Normal</td>
+                    <td>Comparações</td>
+                    <td>999</td>
+                    <td>583.13</td>
+                </tr>
+                <tr>
+                    <td>Pesquisa Sequencial com Sentinela</td>
+                    <td>Comparações</td>
+                    <td>525</td>
+                    <td>291.57</td>
+                </tr>
+                <tr>
+                    <td>Pesquisa Binária</td>
+                    <td>Comparações</td>
+                    <td>8</td>
+                    <td>1.41</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Conclusão</h2>
+        <p>Considerando os resultados obtidos para os algoritmos de ordenação, é evidente que o Bubble Sort é o mais ineficiente entre os métodos aplicados. Este resultado é coerente com seu comportamento quadrático no pior e no melhor caso, caracterizado por um alto número de comparações e acessos à memória. O Bubble Sort realiza múltiplas iterações desnecessárias, mesmo quando os elementos já estão em ordem, implicando em desempenho extremamente inferior.</p>
+        <p>Para o Shell Sort, os diferentes espaçamentos utilizados (16 e 32) não apresentaram diferenças significativas em termos de acessos e comparações. Ambos os espaçamentos foram muito mais eficientes do que o Bubble Sort, devido à estratégia de ordenar elementos distantes e reduzir gradativamente os intervalos. Essa abordagem diminui a necessidade de trocas repetidas entre elementos adjacentes, característica que penaliza o Bubble Sort. O espaçamento maior (32) apresentou um leve aumento no número de acessos e comparações, o que pode ser explicado por uma menor efetividade inicial ao lidar com a desordem dos dados.</p>
+        <p>No caso do Quick Sort, o método de escolha do pivô mostrou uma influência sutil no desempenho. O uso do pivô fixo na primeira posição obteve bons resultados, mas o método considerando o mediano de três foi levemente mais eficiente em termos de acessos à memória, devido à sua melhor divisão dos subvetores em alguns cenários. No entanto, isso gerou um número maior de comparações. Essa diferença pode ser atribuída à redução de desbalanceamento nos subvetores (deseja-se que o pivô gere dois subvetores de mesmo tamanho), característica que melhora a eficiência global do algoritmo, mas exige cálculos adicionais para determinar o pivô.</p>
+        <p>Com base nos resultados e na tabela de desempenho confeccionada com dados de 1000 execução de cada algoritmo, pode-se afirmar que o Quick Sort supera o Shell Sort nas condições analisadas. Apesar de ambos os métodos serem muito mais eficientes do que o Bubble Sort, o Quick Sort apresenta menores tempos de execução esperados, graças ao seu comportamento log-linear no caso médio. O Shell Sort, embora eficiente, depende mais de parâmetros como o espaçamento e pode não atingir a mesma performance do Quick Sort em casos gerais. Em suma, essa análise evidencia que a escolha do algoritmo de ordenação ideal depende fortemente do tamanho e da estrutura dos dados, mas o Quick Sort é uma escolha amplamente superior para dados desordenados de tamanho considerável.</p>
+        <p>Quanto aos algoritmos de busca, a pesquisa binária é claramente superior aos métodos sequenciais, devido ao seu desempenho logarítmico, com uma média de 8 comparações e um desvio padrão de 1,41. Isso ocorre porque ela divide o espaço de busca pela metade a cada iteração, sendo muito mais eficiente para grandes volumes de dados ordenados.</p>
+
+        <p>Por outro lado, a pesquisa sequencial normal apresenta um desempenho linear, com uma média de 999 comparações e desvio padrão de 583,13, tornando-se ineficiente à medida que o tamanho dos dados aumenta. A pesquisa sequencial com sentinela melhora o desempenho, reduzindo as comparações para uma média de 525, mas ainda assim fica muito atrás da pesquisa binária.</p>
+
+        <h2>Logs</h2>
+        <p>Segue uma coleção de logs gerados durante os testes</p>
+        <ul>
+            <li><a href="./test-logs/log-vec-gen1.txt">Gerar vetor Aleatório - 1</a></li>
+            <li><a href="./test-logs/log-vec-gen2.txt">Gerar vetor Aleatório - 2</a></li>
+            <li><a href="./test-logs/log-single1.txt">Análise de um único vetor - 1</a></li>
+            <li><a href="./test-logs/log-single2.txt">Análise de um único vetor - 2</a></li>
+            <li><a href="./test-logs/log-find-1.txt">Encontrar elemento no vetor - 1</a></li>
+            <li><a href="./test-logs/log-find-2.txt">Encontrar elemento no vetor - 2</a></li>
+            <li><a href="./test-logs/log-find-rand1.txt">Encontrar elemento aleatório no vetor - 1</a></li>
+            <li><a href="./test-logs/log-find-rand2.txt">Encontrar elemento aleatório no vetor - 2</a></li>
+            <li><a href="./test-logs/log-analise1.txt">Análise geral - 1</a></li>
+            <li><a href="./test-logs/log-analise2.txt">Análise geral - 2</a></li>
+            <li><a href="./test-logs/log-full-cicle-1.txt">Uso de todas as opções eu uma única execução - 1</a></li>
+        </ul>
+    </section>
+    <footer><p>Leonardo Kreusch GRR20245579</p></footer>
 </body>
 </html>

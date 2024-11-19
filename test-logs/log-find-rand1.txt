@@ -14,8 +14,11 @@ Digite a função que deseja executar:
 5 - Encerra a operacao
 Digite sua opcao: 
 
-[32mO vetor gerado na forma reduzida é: [ 1794, 1587, 430, 1060, 1160, ... , 654, 127, 1511, 306, 636, 1694 ]
-[0m
+0 - Escolher o valor que será buscado
+1 - Encontrar um valor aleatório
+Digite sua opcao: 
+
+[31mELEMENTO NAO ESTA NO VETOR GERADO[0m
 
 Digite a função que deseja executar: 
 1 - Cria novo Vetor

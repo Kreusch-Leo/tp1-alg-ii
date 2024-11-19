@@ -35,6 +35,17 @@ void bubble_sort(int vetor[], int length, int *accessCounter, int *compCounter) 
     }
 }
 
+int mediano_de_tres(int vet[], int esq, int dir, int *accessCounter) {
+    int meio = (esq + dir) / 2;
+    int a = vet[esq], b = vet[meio], c = vet[dir];
+    (*accessCounter) += 3; // Três acessos ao vetor
+
+    // Ordena a, b e c para encontrar o mediano
+    if ((a > b) != (a > c)) return a; // a é o mediano
+    if ((b > a) != (b > c)) return b; // b é o mediano
+    return c;                         // c é o mediano
+}
+
 void particao(int vet[], int esq, int dir, int *pos_pivo, int *accessCounter, int *compCounter, int esqPiv) {
     int i = esq;
     int j = dir;
@@ -43,7 +54,7 @@ void particao(int vet[], int esq, int dir, int *pos_pivo, int *accessCounter, in
     if (esqPiv) { // 0 seleciona o primeiro elemento
         pivo = vet[dir];
     } else { // seleciona o mais proximo do meio
-        pivo = vet[(esq + dir) / 2];  // Pivo ajustado para o valor médio
+        pivo = mediano_de_tres(vet, esq, dir, accessCounter);
     }
 
     while (i < j) {

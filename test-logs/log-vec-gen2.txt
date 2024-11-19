@@ -14,7 +14,7 @@ Digite a função que deseja executar:
 5 - Encerra a operacao
 Digite sua opcao: 
 
-[32mO vetor gerado na forma reduzida é: [ 882, 862, 1631, 1470, 1296, ... , 1860, 319, 81, 288, 995, 1558 ]
+[32mO vetor gerado na forma reduzida é: [ 1674, 852, 999, 1879, 1790, ... , 2036, 557, 1610, 1411, 1919, 2034 ]
 [0m
 
 Digite a função que deseja executar: 

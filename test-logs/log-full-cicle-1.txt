@@ -14,7 +14,7 @@ Digite a função que deseja executar:
 5 - Encerra a operacao
 Digite sua opcao: 
 
-[32mO vetor gerado na forma reduzida é: [ 419, 1533, 235, 1415, 776, ... , 1389, 823, 85, 580, 258, 1345 ]
+[32mO vetor gerado na forma reduzida é: [ 1986, 1531, 1971, 1331, 344, ... , 1392, 262, 38, 1590, 876, 1793 ]
 [0m
 
 Digite a função que deseja executar: 
@@ -23,35 +23,35 @@ Digite a função que deseja executar:
 3 - Busca elemento (Sequencial e Binaria)
 4 - Executa analise geral
 5 - Encerra a operacao
-Digite sua opcao: [32mO vetor desordenado na forma reduzida é: [ 419, 1533, 235, 1415, 776, ... , 1389, 823, 85, 580, 258, 1345 ]
+Digite sua opcao: [32mO vetor desordenado na forma reduzida é: [ 1986, 1531, 1971, 1331, 344, ... , 1392, 262, 38, 1590, 876, 1793 ]
 [0m
 
-[34mO vetor ordenado na forma reduzida é: [ 1, 3, 7, 7, 15, ... , 2040, 2040, 2040, 2043, 2047, 2047 ]
+[34mO vetor ordenado na forma reduzida é: [ 0, 3, 7, 14, 15, ... , 2046, 2046, 2046, 2046, 2046, 2047 ]
 [0m
 
 [34mOs resultados do BubbleSort foram:
-[33mComparacoes entre elementos: 784412
-Acessos ao vetor para trocas: 775764
+[33mComparacoes entre elementos: 789219
+Acessos ao vetor para trocas: 790185
 
 
-[34m Os resultados do ShellSort () foram:
-[33mComparacoes entre elementos: 15446
-Acessos ao vetor para trocas: 20352
+[34m Os resultados do ShellSort (espacamento 16) foram:
+[33mComparacoes entre elementos: 14901
+Acessos ao vetor para trocas: 19807
 
 
-[34m Os resultados do ShellSort () foram:
-[33mComparacoes entre elementos: 15195
-Acessos ao vetor para trocas: 20936
+[34m Os resultados do ShellSort (espacamento 32) foram:
+[33mComparacoes entre elementos: 15656
+Acessos ao vetor para trocas: 21397
 
 
-[34m Os resultados do QuickSort () foram:
-[33mComparacoes entre elementos: 12496
-Acessos ao vetor para trocas: 7162
+[34m Os resultados do QuickSort (pivo na primeira posicao) foram:
+[33mComparacoes entre elementos: 10904
+Acessos ao vetor para trocas: 8720
 
 
-[34m Os resultados do QuickSort () foram:
-[33mComparacoes entre elementos: 12079
-Acessos ao vetor para trocas: 7800
+[34m Os resultados do QuickSort (pivo mediano de tres) foram:
+[33mComparacoes entre elementos: 13060
+Acessos ao vetor para trocas: 7761
 [0m
 
 
@@ -64,13 +64,33 @@ Digite a função que deseja executar:
 5 - Encerra a operacao
 Digite sua opcao: 
 
+0 - Escolher o valor que será buscado
+1 - Encontrar um valor aleatório
+Digite sua opcao: 
+
 Escolha um valor que deseja encontrar
-Digite sua opcao: [36mA pesquisa sequencial comum precisou de 610 comparações para encontrar na posicao 305
-A pesquisa sequencial com sentinela precisou de 720 comparações para encontrar na posicao 305
-A pesquisa binaria precisou de 9 comparações para encontrar na posicao 17[0m
+Digite sua opcao: 
+
+[36mA pesquisa sequencial comum precisou de 348 comparações para encontrar o valor 50 na posicao 174
+A pesquisa sequencial com sentinela precisou de 851 comparações para encontrar o valor 50 na posicao 174
+A pesquisa binaria precisou de 10 comparações para encontrar o valor 50 na posicao 24[0m
 
 
 
+
+Digite a função que deseja executar: 
+1 - Cria novo Vetor
+2 - Ordena Vetor (Bubble, Shell, Quick)
+3 - Busca elemento (Sequencial e Binaria)
+4 - Executa analise geral
+5 - Encerra a operacao
+Digite sua opcao: 
+
+0 - Escolher o valor que será buscado
+1 - Encontrar um valor aleatório
+Digite sua opcao: 
+
+[31mELEMENTO NAO ESTA NO VETOR GERADO[0m
 
 Digite a função que deseja executar: 
 1 - Cria novo Vetor
@@ -1084,70 +1104,70 @@ Preenchimento bem sucedido para o elemento 999
 
 Bubble Sort:
 Acessos:
-Média = 785795
-Desvio padrao = 16622.49
+Média = 786367
+Desvio padrao = 16185.70
 
 Comparacoes:
-Média = 787755
-Desvio padrao = 5540.83
+Média = 787946
+Desvio padrao = 5395.23
 
 
 Shell Sort (espacamento 16):
 Acessos:
-Média = 20018
-Desvio padrao = 465.84
+Média = 19994
+Desvio padrao = 453.51
 
 Comparacoes:
-Média = 15112
-Desvio padrao = 465.84
+Média = 15088
+Desvio padrao = 453.51
 
 
 Shell Sort (espacamento 32):
 Acessos:
-Média = 21332
-Desvio padrao = 565.17
+Média = 21315
+Desvio padrao = 529.19
 
 Comparacoes:
-Média = 15591
-Desvio padrao = 565.17
+Média = 15574
+Desvio padrao = 529.19
 
 
 Quick sort (pivo na primeira posicao):
 Acessos:
-Média = 7148
-Desvio padrao = 97.32
+Média = 8839
+Desvio padrao = 89.49
 
 Comparacoes:
-Média = 12518
-Desvio padrao = 663.34
+Média = 10600
+Desvio padrao = 336.10
 
 
-Quick sort (pivo proximo do meio):
+Quick sort (pivo mediano de tres):
 Acessos:
-Média = 7712
-Desvio padrao = 102.63
+Média = 7717
+Desvio padrao = 103.11
 
 Comparacoes:
-Média = 12742
-Desvio padrao = 705.70
+Média = 12705
+Desvio padrao = 731.02
 
 
 Pesquisa sequencial normal
 Comparacoes:
-Média = 1037
-Desvio padrao = 593.74
+Média = 1036
+Desvio padrao = 594.44
 
 
 Pesquisa sequencial com sentinela
 Comparacoes:
 Média = 506
-Desvio padrao = 296.87
+Desvio padrao = 297.22
 
 
 Pesquisa Binaria
 Comparacoes:
 Média = 8
-Desvio padrao = 1.73
+Desvio padrao = 1.41
 
 
 Digite a função que deseja executar: 
